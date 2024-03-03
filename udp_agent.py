@@ -2,7 +2,6 @@ import socket
 import sys
 import select
 
-# python udp_agent.py -p 1337
 try:
     # Create a UDP socket
     server_soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

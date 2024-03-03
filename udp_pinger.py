@@ -2,7 +2,6 @@ import socket
 import sys
 import datetime
 
-# python udp_pinger.py 127.0.0.1 -p 1337 -s 60 -c 4
 try:
     # Create a UDP socket
     client_soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -48,7 +47,7 @@ try:
             
     print(f"--- {server_ip} statistics ---")
     print(f"{msg_total} packets transmitted, {msg_count} packets received, {(((1-(msg_count/msg_total)) * 10000) // 1 ) / 100}% packet loss")
-
     client_soc.close()
+
 except OSError as exception:
     print(exception.strerror)
